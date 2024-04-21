@@ -785,9 +785,11 @@ MonoBehaviour:
   m_Options:
     m_Options:
     - m_Text: Mario
-      m_Image: {fileID: 0}
+      m_Image: {fileID: 7263181891274304025, guid: 70672da71d9d71a4daaf5f3fc58531e6,
+        type: 3}
     - m_Text: Luigi
-      m_Image: {fileID: 0}
+      m_Image: {fileID: -7975249404588759376, guid: 70672da71d9d71a4daaf5f3fc58531e6,
+        type: 3}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -20166,7 +20168,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b9cb0461beec62948a0935dde4eac43a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 362acd8024fd9354c800f35c8f402adb, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -23097,7 +23099,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f830634b2b845ee43bb25df17d89f349, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e9461b2f66264f24faacc82e6cb515ac, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -34591,6 +34593,7 @@ MonoBehaviour:
   - {fileID: 1215474819}
   - {fileID: 1774958591}
   - {fileID: 927866350}
+  - {fileID: 1477183160}
   sliderText: {fileID: 1514315584}
   lobbyText: {fileID: 465989235}
   currentMaxPlayers: {fileID: 1732849129}
@@ -34683,6 +34686,7 @@ MonoBehaviour:
   - '[C] Bonus'
   - '[C] Desert'
   - '[C] Old Volcano'
+  - '[C] Retro'
   debugMaps: []
   colorManager: {fileID: 1983555074}
 --- !u!4 &887693662
@@ -50562,7 +50566,7 @@ MonoBehaviour:
   m_CellSize: {x: 32, y: 32}
   m_Spacing: {x: 8, y: 8}
   m_Constraint: 1
-  m_ConstraintCount: 4
+  m_ConstraintCount: 7
 --- !u!223 &1472937425
 Canvas:
   m_ObjectHideFlags: 0
@@ -88682,7 +88686,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 57f0c1559535b04478d8af3766b1dc3b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e9461b2f66264f24faacc82e6cb515ac, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -91521,6 +91525,7 @@ GameObject:
   - component: {fileID: 1860640960}
   - component: {fileID: 1860640962}
   - component: {fileID: 1860640961}
+  - component: {fileID: 1860640963}
   m_Layer: 5
   m_Name: ContinuePrompt
   m_TagString: Untagged
@@ -91644,6 +91649,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1860640959}
   m_CullTransparentMesh: 1
+--- !u!111 &1860640963
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860640959}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 409b03b7455c5d64b873fe9fd019824b, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 409b03b7455c5d64b873fe9fd019824b, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1865114078
 GameObject:
   m_ObjectHideFlags: 0
