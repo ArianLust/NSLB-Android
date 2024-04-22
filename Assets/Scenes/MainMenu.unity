@@ -790,6 +790,8 @@ MonoBehaviour:
     - m_Text: Luigi
       m_Image: {fileID: -7975249404588759376, guid: 70672da71d9d71a4daaf5f3fc58531e6,
         type: 3}
+    - m_Text: Waluigi
+      m_Image: {fileID: -1803820175, guid: 70672da71d9d71a4daaf5f3fc58531e6, type: 3}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -3318,12 +3320,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<color=red>Mod by</color>\nLust\nModdimation\n\n<color=red>Mod Playtesters</color>\nn_and_doll_lover\nscrap
-    (peter)/the groat\nMr.Fine\nThe Yoshi Plush Show\nBloop\nJorteroXD\nJusyoniox\nnakikot\n\n<color=red>Assets
+  m_text: "<color=red>Mod by</color>\nLust\nModdimation\n\n<color=red>Logo by</color>\nMrYoshiNL\n\n<color=red>Mod
+    Playtesters</color>\nn_and_doll_lover\nscrap (peter)/the groat\nMr.Fine\nThe
+    Yoshi Plush Show\nBloop\nJorteroXD\nJusyoniox\nnakikot\nMrYoshiNL\n\n<color=red>Assets
     for Mod from</color>\nSuper Mario World\nSuper Mario 3D World\nMario Kart Wii\nSuper
-    Mario Bros. Wonder\nNew Super Mario Bros. \nNewer Super Mario Bros. DS\n\n<color=red>Mobile
-    Mod from</color>\nWark19\n\n<color=yellow>Original Credits</color>\n\n<color=yellow>Game
-    by</color>\nipodtouch0218\n\n<color=yellow>Github Contributors</color>\nGradedWarrior\nTheMoogle\nSkillz\nSkarph\nZest\nkittenchilly\nAmy54Desu\nKraken\nShadowWalker13\nPerez\nmindnomad\n\n<color=yellow>Music</color>\nRENREN\n\n<color=yellow>QA
+    Mario Bros. Wonder\nNew Super Mario Bros. \nNewer Super Mario Bros. DS\nSuper
+    Mario Bros.\nvic's Custom Match-inator\n\n<color=red>Custom Music Remixes</color>\nTater-Tot
+    Tunes (SMB Overworld, Starman)\n\n<color=red>Mobile Mod from</color>\nWark19\n\n<color=yellow>Original
+    Credits</color>\n\n<color=yellow>Game by</color>\nipodtouch0218\n\n<color=yellow>Github
+    Contributors</color>\nGradedWarrior\nTheMoogle\nSkillz\nSkarph\nZest\nkittenchilly\nAmy54Desu\nKraken\nShadowWalker13\nPerez\nmindnomad\n\n<color=yellow>Music</color>\nRENREN\n\n<color=yellow>QA
     Testing</color>\nTheCyVap\nShadow_Walker13\n\n<color=yellow>Level Design</color>\nSkarph\nTheCyVap\nmindnomad\n\n<color=yellow>Original
     Game / Resources</color>\nNew Super Mario Bros.\nNew Super Mario Bros. Wii\nSuper
     Mario Maker 2\n(c) Nintendo\n\n<color=yellow>Asset Rippers</color>\nDemon2Warrior
@@ -3332,7 +3337,7 @@ MonoBehaviour:
     (Tiles/Sound)\n\rSymbolcom (Enemies)\r\nMr. C (Enemies)\r\nRagey (Enemies)\r\nTechokami
     (Enemies)\r\n\rA Refracted Swindler (UI)\r\nTreeki (UI)\r\n\rDouble S (Models)\r\nKartMakerBrosU
     (Models)\r\nTeridaxXD001 (Models)\r\nSkarph (Models/Sound)\r\nLukeWarnut (Sound)\r\nLuke
-    Hackett (Sound)\r\nmindnomad (Sound)\n "
+    Hackett (Sound)\r\nmindnomad (Sound)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d42c556520644b148ada62f0b573e1a5, type: 2}
   m_sharedMaterial: {fileID: 6015020410494396785, guid: d42c556520644b148ada62f0b573e1a5,
