@@ -534,6 +534,11 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7138923084790702724, guid: 43d56bd18d06e9b4abe323618a20a228,
+        type: 3}
+      propertyPath: musicList.Array.data[0]
+      value: Jungle
+      objectReference: {fileID: 0}
     - target: {fileID: 7298383080133919252, guid: 43d56bd18d06e9b4abe323618a20a228,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -629,7 +634,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 221915067}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -674,10 +679,34 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 221915068}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &221915067 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 852414591063787963, guid: 43d56bd18d06e9b4abe323618a20a228,
+    type: 3}
+  m_PrefabInstance: {fileID: 221915062}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221915063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &221915068 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3176947106467645423, guid: 43d56bd18d06e9b4abe323618a20a228,
+    type: 3}
+  m_PrefabInstance: {fileID: 221915062}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221915064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &307745639
 PrefabInstance:
   m_ObjectHideFlags: 0
