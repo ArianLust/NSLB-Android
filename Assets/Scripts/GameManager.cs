@@ -76,6 +76,7 @@ public class GameManager : MonoBehaviour, IOnEventCallback, IInRoomCallbacks, IC
     private ParticleSystem brickBreak;
 
     public HashSet<Player> nonSpectatingPlayers;
+    public UIUpdater uiUpdater;
 
     // EVENT CALLBACK
     public void SendAndExecuteEvent(Enums.NetEventIds eventId, object parameters, SendOptions sendOption, RaiseEventOptions eventOptions = null) {
@@ -424,9 +425,8 @@ public class GameManager : MonoBehaviour, IOnEventCallback, IInRoomCallbacks, IC
         loopMusic = GetComponent<LoopingMusic>();
         coins = GameObject.FindGameObjectsWithTag("coin");
         levelUIColor.a = .7f;
-
-        //Load Random Music
         mainMusic = GetComponent<MusicRandomizer>().GetMusic();
+        if (mainMusic && uiUpdater) uiUpdater.SetMusicName(mainMusic.showName);
 
         InputSystem.controls.LoadBindingOverridesFromJson(GlobalController.Instance.controlsJson);
 
