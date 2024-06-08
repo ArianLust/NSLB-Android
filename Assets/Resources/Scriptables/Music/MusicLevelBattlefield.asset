@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e5478bfbe63c3c46b392d3ca752690c, type: 3}
   m_Name: MusicLevelBattlefield
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: c5aa5a785db40c54b9ef812152de9fd9, type: 3}
-  fastClip: {fileID: 8300000, guid: 8e8b0282512c7f248a342a2e75ab82f1, type: 3}
+  clip: {fileID: 8300000, guid: d8dc1d0dbfbadcb489f835b46d7851d3, type: 3}
+  fastClip: {fileID: 8300000, guid: 880a47123f855df4899783cfec1fdc90, type: 3}
   loopStartSample: 6.414
   loopEndSample: 97.212
   showName: Purple Comet - Super Mario Galaxy - Nintendo

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: QuestionCoinSMB
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 21300000, guid: 7cd7b4df99407e740abe83cf41a8fe1a, type: 3}
-  - {fileID: 21300000, guid: 71222d57d7804434ea0ebb0869b6e603, type: 3}
-  - {fileID: 21300000, guid: ed80bb3572c7ad14293380c68cfcbc56, type: 3}
+  - {fileID: 21300000, guid: 9c825b179e4bb4d49b8981cc8c8f3e3a, type: 3}
+  - {fileID: 21300000, guid: 08c470a67cf14c240a4e47f489a6ab5c, type: 3}
+  - {fileID: 21300000, guid: 55954b1c7355c5a448c91cd5dcc024dc, type: 3}
   m_MinSpeed: 4
   m_MaxSpeed: 4
   m_AnimationStartTime: 0
