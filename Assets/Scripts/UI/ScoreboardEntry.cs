@@ -5,7 +5,8 @@ using TMPro;
 
 using NSMB.Utils;
 
-public class ScoreboardEntry : MonoBehaviour {
+public class ScoreboardEntry : MonoBehaviour
+{
 
     [SerializeField] private TMP_Text nameText, valuesText;
     [SerializeField] private Image background;
@@ -15,8 +16,10 @@ public class ScoreboardEntry : MonoBehaviour {
     private int playerId, currentLives, currentStars;
     private bool rainbowEnabled;
 
-    public void Start() {
-        if (!target) {
+    public void Start()
+    {
+        if (!target)
+        {
             enabled = false;
             return;
         }
@@ -30,15 +33,38 @@ public class ScoreboardEntry : MonoBehaviour {
         rainbowEnabled = target.photonView.Owner.HasRainbowName();
     }
 
-    public void Update() {
+    public void Update()
+    {
         CheckForTextUpdate();
 
         if (rainbowEnabled)
-            nameText.color = Utils.GetRainbowColor();
+            if (rainbowEnabled)
+            {
+                {
+                    if (nameText.text.Contains("Lust") || nameText.text.Contains("Moddimation"))
+                    {
+                        nameText.color = Utils.GetRainbowColor();
+                    }
+                    else if (nameText.text.Contains("Windows10V") || nameText.text.Contains("mapmaker2"))
+                    {
+                        nameText.color = Utils.GetBlueColor();
+                    }
+                    else if (nameText.text.Contains("MEDDOURK95") || nameText.text.Contains("playtester2"))
+                    {
+                        nameText.color = Utils.GetRedColor();
+                    }
+                    else if (nameText.text.Contains("MrYoshiNL") || nameText.text.Contains("FrostyCake"))
+                    {
+                        nameText.color = Utils.GetYellowColor();
+                    }
+                }
+            }
     }
 
-    public void CheckForTextUpdate() {
-        if (!target) {
+    public void CheckForTextUpdate()
+    {
+        if (!target)
+        {
             // our target lost all lives (or dc'd)
             background.color = new(0.4f, 0.4f, 0.4f, 0.5f);
             return;
@@ -53,7 +79,8 @@ public class ScoreboardEntry : MonoBehaviour {
         ScoreboardUpdater.instance.Reposition();
     }
 
-    public void UpdateText() {
+    public void UpdateText()
+    {
         string txt = "";
         if (currentLives >= 0)
             txt += target.character.uistring + Utils.GetSymbolString(currentLives.ToString());
@@ -62,12 +89,15 @@ public class ScoreboardEntry : MonoBehaviour {
         valuesText.text = txt;
     }
 
-    public class EntryComparer : IComparer<ScoreboardEntry> {
-        public int Compare(ScoreboardEntry x, ScoreboardEntry y) {
+    public class EntryComparer : IComparer<ScoreboardEntry>
+    {
+        public int Compare(ScoreboardEntry x, ScoreboardEntry y)
+        {
             if (x.target == null ^ y.target == null)
                 return x.target == null ? 1 : -1;
 
-            if (x.currentStars == y.currentStars || x.currentLives == 0 || y.currentLives == 0) {
+            if (x.currentStars == y.currentStars || x.currentLives == 0 || y.currentLives == 0)
+            {
                 if (Mathf.Max(0, x.currentLives) == Mathf.Max(0, y.currentLives))
                     return x.playerId - y.playerId;
 
