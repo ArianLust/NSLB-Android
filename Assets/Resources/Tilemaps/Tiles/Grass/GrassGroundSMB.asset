@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ffb1820c005ca6489850e83a844726b, type: 3}
   m_Name: GrassGroundSMB
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 21300000, guid: 76389434b264c0b41a877a6b14e6b4bf, type: 3}
+  m_DefaultSprite: {fileID: 21300000, guid: 5458e049ec57c1548b188ee60c02b0aa, type: 3}
   m_DefaultGameObject: {fileID: 0}
   m_DefaultColliderType: 2
   m_TilingRules: []

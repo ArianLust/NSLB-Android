@@ -7,7 +7,8 @@ using Photon.Pun;
 using Photon.Realtime;
 using NSMB.Utils;
 
-public class PlayerListEntry : MonoBehaviour {
+public class PlayerListEntry : MonoBehaviour
+{
 
     public Player player;
 
@@ -24,16 +25,37 @@ public class PlayerListEntry : MonoBehaviour {
 
     private GameObject blockerInstance;
 
-    private void OnDestroy() {
+    private void OnDestroy()
+    {
         if (blockerInstance)
             Destroy(blockerInstance);
     }
 
-    public void Update() {
-        nameText.color = Utils.GetRainbowColor();
+    public void Update()
+    {
+
+        if (nameText.text.Contains("Lust") || nameText.text.Contains("Moddimation"))
+        {
+            nameText.color = Utils.GetRainbowColor();
+        }
+        else if (nameText.text.Contains("Windows10V") || nameText.text.Contains("mapmaker2"))
+        {
+            nameText.color = Utils.GetBlueColor();
+        }
+        else if (nameText.text.Contains("MEDDOURK95") || nameText.text.Contains("playtester2"))
+        {
+            nameText.color = Utils.GetRedColor();
+        }
+        else if (nameText.text.Contains("MrYoshiNL") || nameText.text.Contains("FrostyCake"))
+        {
+            nameText.color = Utils.GetYellowColor();
+        }
     }
 
-    public void UpdateText() {
+
+
+    public void UpdateText()
+    {
         colorStrip.color = Utils.GetPlayerColor(player, 1f, 1f);
         enabled = player.HasRainbowName();
 
@@ -49,13 +71,20 @@ public class PlayerListEntry : MonoBehaviour {
         Utils.GetCustomProperty(Enums.NetPlayerProperties.Ping, out int ping, player.CustomProperties);
 
         string pingColor;
-        if (ping < 0) {
+        if (ping < 0)
+        {
             pingColor = "black";
-        } else if (ping < 80) {
+        }
+        else if (ping < 80)
+        {
             pingColor = "#00b900";
-        } else if (ping < 120) {
+        }
+        else if (ping < 120)
+        {
             pingColor = "orange";
-        } else {
+        }
+        else
+        {
             pingColor = "red";
         }
 
@@ -64,7 +93,8 @@ public class PlayerListEntry : MonoBehaviour {
 
         Transform parent = transform.parent;
         int childIndex = 0;
-        for (int i = 0; i < parent.childCount; i++) {
+        for (int i = 0; i < parent.childCount; i++)
+        {
             if (parent.GetChild(i) != gameObject)
                 continue;
 
@@ -75,12 +105,14 @@ public class PlayerListEntry : MonoBehaviour {
         layout.layoutPriority = transform.parent.childCount - childIndex;
     }
 
-    public void ShowDropdown() {
+    public void ShowDropdown()
+    {
         if (blockerInstance)
             Destroy(blockerInstance);
 
         bool admin = PhotonNetwork.IsMasterClient && !player.IsMasterClient;
-        foreach (GameObject option in adminOnlyOptions) {
+        foreach (GameObject option in adminOnlyOptions)
+        {
             option.SetActive(admin);
         }
 
@@ -98,7 +130,8 @@ public class PlayerListEntry : MonoBehaviour {
         MainMenuManager.Instance.sfx.PlayOneShot(Enums.Sounds.UI_Cursor.GetClip());
     }
 
-    public void HideDropdown(bool didAction) {
+    public void HideDropdown(bool didAction)
+    {
         Destroy(blockerInstance);
 
         background.offsetMin = new(background.offsetMin.x, 0);
@@ -107,27 +140,32 @@ public class PlayerListEntry : MonoBehaviour {
         MainMenuManager.Instance.sfx.PlayOneShot((didAction ? Enums.Sounds.UI_Decide : Enums.Sounds.UI_Back).GetClip());
     }
 
-    public void BanPlayer() {
+    public void BanPlayer()
+    {
         MainMenuManager.Instance.Ban(player);
         HideDropdown(true);
     }
 
-    public void KickPlayer() {
+    public void KickPlayer()
+    {
         MainMenuManager.Instance.Kick(player);
         HideDropdown(true);
     }
 
-    public void MutePlayer() {
+    public void MutePlayer()
+    {
         MainMenuManager.Instance.Mute(player);
         HideDropdown(true);
     }
 
-    public void PromotePlayer() {
+    public void PromotePlayer()
+    {
         MainMenuManager.Instance.Promote(player);
         HideDropdown(true);
     }
 
-    public void CopyPlayerId() {
+    public void CopyPlayerId()
+    {
         TextEditor te = new();
         te.text = player.UserId;
         te.SelectAll();

@@ -4,7 +4,8 @@ using TMPro;
 
 using NSMB.Utils;
 
-public class UserNametag : MonoBehaviour {
+public class UserNametag : MonoBehaviour
+{
 
     public PlayerController parent;
 
@@ -15,12 +16,15 @@ public class UserNametag : MonoBehaviour {
 
     private bool rainbowName;
 
-    public void Start() {
+    public void Start()
+    {
         rainbowName = parent.photonView.Owner.HasRainbowName();
     }
 
-    public void LateUpdate() {
-        if (parent == null) {
+    public void LateUpdate()
+    {
+        if (parent == null)
+        {
             Destroy(gameObject);
             return;
         }
@@ -36,19 +40,23 @@ public class UserNametag : MonoBehaviour {
         Vector3 screenPoint = cam.WorldToViewportPoint(worldPos, Camera.MonoOrStereoscopicEye.Mono) * size;
         screenPoint.z = 0;
 
-        if (GlobalController.Instance.settings.ndsResolution && GlobalController.Instance.settings.fourByThreeRatio) {
+        if (GlobalController.Instance.settings.ndsResolution && GlobalController.Instance.settings.fourByThreeRatio)
+        {
             // handle black borders
             float screenW = Screen.width;
             float screenH = Screen.height;
             float screenAspect = screenW / screenH;
 
-            if (screenAspect > cam.aspect) {
+            if (screenAspect > cam.aspect)
+            {
                 float availableWidth = screenH * cam.aspect;
                 float widthPercentage = availableWidth / screenW;
 
                 screenPoint.x *= widthPercentage;
                 screenPoint.x += (screenW - availableWidth) / 2;
-            } else {
+            }
+            else
+            {
                 float availableHeight = screenW * (1f / cam.aspect);
                 float heightPercentage = availableHeight / screenH;
                 screenPoint.y *= heightPercentage;
@@ -68,6 +76,23 @@ public class UserNametag : MonoBehaviour {
         text.text += Utils.GetSymbolString($"Sx{parent.stars}");
 
         if (rainbowName)
-            text.color = Utils.GetRainbowColor();
+        {
+            if (text.text.Contains("Lust") || text.text.Contains("Moddimation"))
+            {
+                text.color = Utils.GetRainbowColor();
+            }
+            else if (text.text.Contains("Windows10V") || text.text.Contains("mapmaker2"))
+            {
+                text.color = Utils.GetBlueColor();
+            }
+            else if (text.text.Contains("MEDDOURK95") || text.text.Contains("playtester2"))
+            {
+                text.color = Utils.GetRedColor();
+            }
+            else if (text.text.Contains("MrYoshiNL") || text.text.Contains("FrostyCake"))
+            {
+                text.color = Utils.GetYellowColor();
+            }
+        }
     }
 }

@@ -13,7 +13,7 @@ public class UIUpdater : MonoBehaviour {
     public GameObject playerTrackTemplate, starTrackTemplate;
     public PlayerController player;
     public Sprite storedItemNull;
-    public TMP_Text uiStars, uiCoins, uiDebug, uiLives, uiCountdown;
+    public TMP_Text uiStars, uiCoins, uiDebug, uiLives, uiCountdown, uiMusicName;
     public Image itemReserve, itemColor;
     public float pingSample = 0;
 
@@ -21,6 +21,7 @@ public class UIUpdater : MonoBehaviour {
     private GameObject starsParent, coinsParent, livesParent, timerParent;
     private readonly List<Image> backgrounds = new();
     private bool uiHidden;
+    private float uiMusicNameTimer = 0;
 
     private int coins = -1, stars = -1, lives = -1, timer = -1;
 
@@ -66,6 +67,10 @@ public class UIUpdater : MonoBehaviour {
 
         UpdateStoredItemUI();
         UpdateTextUI();
+    }
+    public void SetMusicName(string name)
+    {
+        uiMusicName.text += name;
     }
 
     private void ToggleUI(bool hidden) {
@@ -127,6 +132,11 @@ public class UIUpdater : MonoBehaviour {
             }
         } else {
             timerParent.SetActive(false);
+        }
+        if (player && uiMusicName)
+        {
+            if (uiMusicNameTimer == 0) uiMusicNameTimer = Time.time;
+            if (Time.time - uiMusicNameTimer > 8) Destroy(uiMusicName.gameObject);
         }
     }
 

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e5478bfbe63c3c46b392d3ca752690c, type: 3}
   m_Name: MusicOldVolcano
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 1c9be5c46bbc88b4bb80fa54a00a1121, type: 3}
-  fastClip: {fileID: 8300000, guid: 64d8fbc59d4661a4196a3285c7755747, type: 3}
+  clip: {fileID: 8300000, guid: cd72e591b8f4a484d8435b0e3ea75113, type: 3}
+  fastClip: {fileID: 8300000, guid: 62e26cd492fa33849a068ec8abb7bd84, type: 3}
   loopStartSample: 6.79
   loopEndSample: 65.076
+  showName: Go! Mario! Go! (Phase 2) - Paper Mario - Nintendo
