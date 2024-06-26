@@ -152,7 +152,7 @@ public class MainMenuManager : MonoBehaviour, ILobbyCallbacks, IInRoomCallbacks,
     public void OnPlayerPropertiesUpdate(Player player, Hashtable playerProperties) {
         // increase or remove when toadette or another character is added
         Utils.GetCustomProperty(Enums.NetRoomProperties.Debug, out bool debug);
-        if (PhotonNetwork.IsMasterClient && Utils.GetCharacterIndex(player) > 2 && !debug) {
+        if (PhotonNetwork.IsMasterClient && Utils.GetCharacterIndex(player) > 3 && !debug) {
             PhotonNetwork.CloseConnection(player);
         }
         UpdateSettingEnableStates();
@@ -444,7 +444,7 @@ public class MainMenuManager : MonoBehaviour, ILobbyCallbacks, IInRoomCallbacks,
 
             //version separation
             Match match = Regex.Match(Application.version, "^\\w*\\.\\w*\\.\\w*");
-            PhotonNetwork.NetworkingClient.AppVersion = match.Groups[0].Value;
+            PhotonNetwork.NetworkingClient.AppVersion = match.Groups[0].Value + "ModdimationVSLust";
 
             string id = PlayerPrefs.GetString("id", null);
             string token = PlayerPrefs.GetString("token", null);
